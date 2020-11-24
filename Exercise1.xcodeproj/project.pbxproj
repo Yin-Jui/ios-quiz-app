@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		823831602566EFE8006CE223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238315F2566EFE8006CE223 /* AppDelegate.swift */; };
 		823831622566EFE8006CE223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823831612566EFE8006CE223 /* SceneDelegate.swift */; };
-		823831642566EFE8006CE223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823831632566EFE8006CE223 /* ViewController.swift */; };
+		823831642566EFE8006CE223 /* MultiChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823831632566EFE8006CE223 /* MultiChoiceViewController.swift */; };
 		823831672566EFE8006CE223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823831652566EFE8006CE223 /* Main.storyboard */; };
 		823831692566EFEB006CE223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823831682566EFEB006CE223 /* Assets.xcassets */; };
 		8238316C2566EFEB006CE223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8238316A2566EFEB006CE223 /* LaunchScreen.storyboard */; };
 		823831772566EFEB006CE223 /* Exercise1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823831762566EFEB006CE223 /* Exercise1Tests.swift */; };
 		823831822566EFEB006CE223 /* Exercise1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823831812566EFEB006CE223 /* Exercise1UITests.swift */; };
+		8238319325675B33006CE223 /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238319225675B33006CE223 /* shared.swift */; };
+		8238319825675BE1006CE223 /* NumericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238319725675BE1006CE223 /* NumericViewController.swift */; };
+		8238319D25675BF0006CE223 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238319C25675BF0006CE223 /* ScoreViewController.swift */; };
+		823832002568E42A006CE223 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823831FF2568E42A006CE223 /* QuestionViewController.swift */; };
+		826972B52569A7EA000A94F3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826972B42569A7EA000A94F3 /* Question.swift */; };
+		826972BA2569B03B000A94F3 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826972B92569B03B000A94F3 /* QuestionCell.swift */; };
+		826972D4256C68EB000A94F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826972D3256C68EB000A94F3 /* DetailViewController.swift */; };
+		826972DC256CC541000A94F3 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826972DB256CC541000A94F3 /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,7 @@
 		8238315C2566EFE8006CE223 /* Exercise1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8238315F2566EFE8006CE223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		823831612566EFE8006CE223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		823831632566EFE8006CE223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		823831632566EFE8006CE223 /* MultiChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiChoiceViewController.swift; sourceTree = "<group>"; };
 		823831662566EFE8006CE223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		823831682566EFEB006CE223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8238316B2566EFEB006CE223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		8238317D2566EFEB006CE223 /* Exercise1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		823831812566EFEB006CE223 /* Exercise1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise1UITests.swift; sourceTree = "<group>"; };
 		823831832566EFEB006CE223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8238319225675B33006CE223 /* shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
+		8238319725675BE1006CE223 /* NumericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericViewController.swift; sourceTree = "<group>"; };
+		8238319C25675BF0006CE223 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		823831FF2568E42A006CE223 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		826972B42569A7EA000A94F3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		826972B92569B03B000A94F3 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		826972D3256C68EB000A94F3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		826972DB256CC541000A94F3 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +117,16 @@
 			children = (
 				8238315F2566EFE8006CE223 /* AppDelegate.swift */,
 				823831612566EFE8006CE223 /* SceneDelegate.swift */,
-				823831632566EFE8006CE223 /* ViewController.swift */,
+				823831632566EFE8006CE223 /* MultiChoiceViewController.swift */,
+				823831FF2568E42A006CE223 /* QuestionViewController.swift */,
+				826972B92569B03B000A94F3 /* QuestionCell.swift */,
+				8238319225675B33006CE223 /* shared.swift */,
+				826972B42569A7EA000A94F3 /* Question.swift */,
 				823831652566EFE8006CE223 /* Main.storyboard */,
+				826972D3256C68EB000A94F3 /* DetailViewController.swift */,
+				826972DB256CC541000A94F3 /* ImageStore.swift */,
+				8238319725675BE1006CE223 /* NumericViewController.swift */,
+				8238319C25675BF0006CE223 /* ScoreViewController.swift */,
 				823831682566EFEB006CE223 /* Assets.xcassets */,
 				8238316A2566EFEB006CE223 /* LaunchScreen.storyboard */,
 				8238316D2566EFEB006CE223 /* Info.plist */,
@@ -258,9 +282,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823831642566EFE8006CE223 /* ViewController.swift in Sources */,
+				826972DC256CC541000A94F3 /* ImageStore.swift in Sources */,
+				823831642566EFE8006CE223 /* MultiChoiceViewController.swift in Sources */,
+				826972B52569A7EA000A94F3 /* Question.swift in Sources */,
 				823831602566EFE8006CE223 /* AppDelegate.swift in Sources */,
+				823832002568E42A006CE223 /* QuestionViewController.swift in Sources */,
+				8238319825675BE1006CE223 /* NumericViewController.swift in Sources */,
+				8238319325675B33006CE223 /* shared.swift in Sources */,
+				826972BA2569B03B000A94F3 /* QuestionCell.swift in Sources */,
+				826972D4256C68EB000A94F3 /* DetailViewController.swift in Sources */,
 				823831622566EFE8006CE223 /* SceneDelegate.swift in Sources */,
+				8238319D25675BF0006CE223 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

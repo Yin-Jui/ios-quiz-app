@@ -16,7 +16,7 @@ class MultiChoiceViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet var nextButton: UIButton!
     
     var currentIndex: Int = 0
-    var options: [[String]] = [["Stdney", "Perth", "Brisbane", "Melbourne"], ["Ping An Finance Center", "Abraj Al-Bait Clock Tower", "Shanghai Tower", "Burj Khalifa"], ["1918", "1937", "1914", "2020"]]
+    var options: [[String]] = [["Sydney", "Perth", "Brisbane", "Melbourne"], ["Ping An Finance Center", "Abraj Al-Bait Clock Tower", "Shanghai Tower", "Burj Khalifa"], ["1918", "1937", "1914", "2020"]]
     var choice: String = ""
     let questions: [String] = [
             "What is the capital city of Australia?",
@@ -28,7 +28,6 @@ class MultiChoiceViewController: UIViewController, UIPickerViewDataSource, UIPic
         "Burj Khalifa",
         "1914"
     ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
@@ -40,8 +39,6 @@ class MultiChoiceViewController: UIViewController, UIPickerViewDataSource, UIPic
     func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1
     }
-
-
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return options[currentIndex].count
@@ -63,15 +60,19 @@ class MultiChoiceViewController: UIViewController, UIPickerViewDataSource, UIPic
         let question: String = questions[currentIndex]
         questionLabel.text = question
         submit.isEnabled = true
+        //set default choice
+        pickerView.selectRow(0, inComponent: 0, animated: true)
         pickerView.reloadAllComponents()
     }
    
     @IBAction func submitAnswer(_ sender: UIButton){
         if choice == answers[currentIndex]{
+            shared.info.correct += 1
             resultLabel.text = "Correct"
             resultLabel.textColor = UIColor.green
         }
         else{
+            shared.info.incorrect += 1
             resultLabel.text = "Incorrect"
             resultLabel.textColor = UIColor.red
         }
