@@ -45,14 +45,7 @@ class shared {
             questionList.append(newQuestion)
             return newQuestion
         }
-    func createQuestions(){
-        let newQuestion = Question(q: "5 + 9 = ?", a: 14)
-            questionList.append(newQuestion)
-        let newQuestion2 = Question(q: "9 * 8 = ?", a: 72)
-            questionList.append(newQuestion2)
-        let newQuestion3 = Question(q: "90 / 5 = ?", a: 16)
-            questionList.append(newQuestion3)
-    }
+
     func removeQuestion(_ question: Question) {
         if let index = questionList.firstIndex(of: question) {
             questionList.remove(at: index)

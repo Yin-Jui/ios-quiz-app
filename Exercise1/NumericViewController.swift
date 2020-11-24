@@ -8,20 +8,21 @@
 import UIKit
 
 class NumericViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var input: UITextField!
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var submit: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var input: UITextField!
+    @IBOutlet var resultLabel: UILabel!
+    @IBOutlet var submit: UIButton!
+    @IBOutlet var nextButton: UIButton!
     
     var ans: Int? // users might not input the answer yet
     
     //Update if there is modification of question list
     override func viewWillAppear(_ animated: Bool) {
+        print(shared.info.questionList)
         if(shared.info.currentIndex == shared.info.questionList.count - 1){
             nextButton.isEnabled = false
         }
-        if(shared.info.currentIndex == shared.info.questionList.count){
+        else if(shared.info.currentIndex == shared.info.questionList.count){
             questionLabel.text = "No more question to display"
             submit.isEnabled = false
             nextButton.isEnabled = false
@@ -35,8 +36,13 @@ class NumericViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = shared.info.questionList[shared.info.currentIndex].question
-        resultLabel.text = "";
+        if(shared.info.questionList.count == 0){
+            questionLabel.text = ""
+        }
+        else{
+            questionLabel.text = shared.info.questionList[shared.info.currentIndex].question
+        }
+        resultLabel.text = ""
     }
     @IBAction func inputChanged(_ textField: UITextField) {
         if let text = textField.text,
