@@ -20,11 +20,9 @@ class shared {
     var incorrect = 0
     var currentIndex = 0
     var questionList = [Question]()
-    var answers: [Int] = [
-        14,
-        72,
-        16
-    ]
+    var trackQuestion:Question!
+    var backFromDraw: Bool = false
+    
     private init() {
         //load the items
         do {
@@ -49,7 +47,6 @@ class shared {
     func removeQuestion(_ question: Question) {
         if let index = questionList.firstIndex(of: question) {
             questionList.remove(at: index)
-            answers.remove(at: index)
         }
     }
     
@@ -60,10 +57,6 @@ class shared {
         let movedItem = questionList[fromIndex]
         questionList.remove(at: fromIndex)
         questionList.insert(movedItem, at: toIndex)
-        //update the index of answers array
-        let movedAnswer = answers[fromIndex]
-        answers.remove(at: fromIndex)
-        answers.insert(movedAnswer, at: toIndex)
     }
     
     @objc func saveChanges() -> Bool {

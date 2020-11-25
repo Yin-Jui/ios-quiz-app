@@ -106,7 +106,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }()
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        print("hello")
+       // super.viewWillAppear(animated)
         if(!isAdd){
             Question.text = question.question
             Answer.text = String(question.answer)
@@ -114,6 +115,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             let key = question.itemKey
             let imageToDisplay = imageStore.image(forKey: key)
             imageView.image = imageToDisplay
+            
+        }
+        if(shared.info.backFromDraw){
+            Question.text = shared.info.trackQuestion.question
+            Answer.text = String(shared.info.trackQuestion.answer)
+            dateLabel.text = dateFormatter.string(from: shared.info.trackQuestion.dateCreated)
+            let key = shared.info.trackQuestion.itemKey
+            let imageToDisplay = imageStore.image(forKey: key)
+            imageView.image = imageToDisplay
+            shared.info.backFromDraw = false
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -144,5 +155,29 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // instantiate a question because in draw view, need to save its image.
+        
+        if(isAdd){
+            let q = Question.text ?? ""
+            let tmp = QuestionViewController()
+            if let valueText = Answer.text,
+               let value = numberFormatter.number(from: valueText) {
+                tmp.addNewQuestion(q: q, a: value.intValue)
+            } else {
+                tmp.addNewQuestion(q: q, a: 0)
+            }
+            question = shared.info.questionList[shared.info.questionList.count-1]
+            hasAdded = true;
+        }
+        switch segue.identifier {
+        case "draw":
+            print(question.itemKey)
+            shared.info.trackQuestion = question
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
     }
 }

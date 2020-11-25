@@ -16,11 +16,13 @@ class Question: Equatable, Codable{
     var answer: Int
     let dateCreated: Date
     let itemKey: String
+    var isSubmitted: Bool
     
     init(q: String, a: Int) {
         self.question = q
         self.answer = a
         self.dateCreated = Date()
         self.itemKey = UUID().uuidString
+        self.isSubmitted = false
     }
 }
